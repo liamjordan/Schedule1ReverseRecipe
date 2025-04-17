@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/schedule1reverserecipe/static/css/main.433b45b7.css",
-    "main.js": "/schedule1reverserecipe/static/js/main.37c70210.js",
-    "static/js/453.6eb2f05c.chunk.js": "/schedule1reverserecipe/static/js/453.6eb2f05c.chunk.js",
-    "index.html": "/schedule1reverserecipe/index.html",
-    "main.433b45b7.css.map": "/schedule1reverserecipe/static/css/main.433b45b7.css.map",
-    "main.37c70210.js.map": "/schedule1reverserecipe/static/js/main.37c70210.js.map",
-    "453.6eb2f05c.chunk.js.map": "/schedule1reverserecipe/static/js/453.6eb2f05c.chunk.js.map"
+    "main.css": "/Schedule1ReverseRecipe/static/css/main.433b45b7.css",
+    "main.js": "/Schedule1ReverseRecipe/static/js/main.bca0a44e.js",
+    "static/js/453.6eb2f05c.chunk.js": "/Schedule1ReverseRecipe/static/js/453.6eb2f05c.chunk.js",
+    "index.html": "/Schedule1ReverseRecipe/index.html",
+    "main.433b45b7.css.map": "/Schedule1ReverseRecipe/static/css/main.433b45b7.css.map",
+    "main.bca0a44e.js.map": "/Schedule1ReverseRecipe/static/js/main.bca0a44e.js.map",
+    "453.6eb2f05c.chunk.js.map": "/Schedule1ReverseRecipe/static/js/453.6eb2f05c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.433b45b7.css",
-    "static/js/main.37c70210.js"
+    "static/js/main.bca0a44e.js"
   ]
 }
