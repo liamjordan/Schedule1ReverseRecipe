@@ -1,16 +1,31 @@
+/* Global App container */
 .App {
-  max-width: 720px;
+  max-width: 760px;
   margin: 2rem auto;
   padding: 1rem;
-  font-family: system-ui, sans-serif;
+  font-family: "Segoe UI", system-ui, sans-serif;
   color: #222;
 }
 
+/* Headings */
 h1 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+/* Ingredient & Effect Lists */
 .effect-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -19,17 +34,36 @@ h1 {
 }
 
 .effect-list label {
-  background: #f4f4f4;
-  padding: 0.5rem;
+  background: #f7f7f7;
+  padding: 0.5rem 0.75rem;
   border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   cursor: pointer;
   transition: background 0.2s ease;
 }
 
 .effect-list label:hover {
-  background: #e0e0e0;
+  background: #eaeaea;
 }
 
+/* Slider */
+input[type="range"] {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Dropdown */
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Buttons */
 button {
   padding: 0.6rem 1.2rem;
   font-weight: bold;
@@ -47,6 +81,13 @@ button:hover {
   background: #1b5e20;
 }
 
-input[type=\"range\"] {
-  margin-bottom: 1rem;
+/* Nav Links */
+nav a {
+  font-weight: 600;
+  color: #2e7d32;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
