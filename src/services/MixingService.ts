@@ -10,6 +10,15 @@ interface State {
   steps: MixStep[];
 }
 
+const BaseDrugs: Record<string, string | null> = {
+  "OG Kush": "Calming",
+  "Sour Diesel": "Refreshing",
+  "Green Crack": "Energizing",
+  "Granddaddy Purple": "Sedating",
+  "Cocaine": null,
+  "Meth": null
+};
+
 export class MixingService {
   private allIngredients: Ingredient[] = [];
   private maxDepth: number;
@@ -19,10 +28,12 @@ export class MixingService {
     this.maxDepth = Math.min(maxDepth, 10); // Cap depth at 10
   }
 
-  solveUsingBFS(targetEffects: string[]): MixResult {
+  solveUsingBFS(targetEffects: string[], baseDrug?: string): MixResult {
+    const baseEffect = baseDrug && BaseDrugs[baseDrug] ? [BaseDrugs[baseDrug]!] : [];
+
     const queue: State[] = [
       {
-        effects: [],
+        effects: baseEffect,
         used: [],
         steps: []
       }

@@ -10,6 +10,7 @@ function App() {
   const [steps, setSteps] = useState<MixStep[]>([]);
   const [finalEffects, setFinalEffects] = useState<string[]>([]);
   const [maxDepth, setMaxDepth] = useState<number>(6);
+  const [baseDrug, setBaseDrug] = useState<string>("OG Kush");
 
   useEffect(() => {
     const ingredients = IngredientRepository.getAllIngredients();
@@ -33,7 +34,7 @@ function App() {
 
   const runSolver = () => {
     const service = new MixingService(maxDepth);
-    const result = service.solveUsingBFS(selectedEffects);
+    const result = service.solveUsingBFS(selectedEffects, baseDrug);
     setSteps(result.steps);
     setFinalEffects(result.finalEffects);
   };
@@ -56,9 +57,7 @@ function App() {
         ))}
       </div>
 
-      <h2
-        title="Higher depth explores more combinations, but takes more time (max 10)"
-      >
+      <h2 title="Higher depth explores more combinations, but takes more time (max 10)">
         Max Mix Depth: {maxDepth}
       </h2>
       <input
@@ -69,6 +68,20 @@ function App() {
         onChange={(e) => setMaxDepth(parseInt(e.target.value))}
         style={{ width: "100%" }}
       />
+
+      <h2>Choose Base Drug</h2>
+      <select
+        value={baseDrug}
+        onChange={(e) => setBaseDrug(e.target.value)}
+        style={{ marginBottom: "1rem", padding: "0.5rem" }}
+      >
+        <option>OG Kush</option>
+        <option>Sour Diesel</option>
+        <option>Green Crack</option>
+        <option>Granddaddy Purple</option>
+        <option>Cocaine</option>
+        <option>Meth</option>
+      </select>
 
       <button onClick={runSolver}>Mix It!</button>
 
