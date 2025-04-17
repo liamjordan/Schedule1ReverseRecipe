@@ -42,7 +42,19 @@ function App() {
   return (
     <div className="App">
       <h1>Schedule 1 Reverse Recipe Tool</h1>
-
+      <h2>Choose Base Drug</h2>
+      <select
+        value={baseDrug}
+        onChange={(e) => setBaseDrug(e.target.value)}
+        style={{ marginBottom: "1rem", padding: "0.5rem" }}
+      >
+        <option>OG Kush</option>
+        <option>Sour Diesel</option>
+        <option>Green Crack</option>
+        <option>Granddaddy Purple</option>
+        <option>Cocaine</option>
+        <option>Meth</option>
+      </select>
       <h2>Select Desired Effects</h2>
       <div className="effect-list">
         {allEffects.map((effect) => (
@@ -69,19 +81,7 @@ function App() {
         style={{ width: "100%" }}
       />
 
-      <h2>Choose Base Drug</h2>
-      <select
-        value={baseDrug}
-        onChange={(e) => setBaseDrug(e.target.value)}
-        style={{ marginBottom: "1rem", padding: "0.5rem" }}
-      >
-        <option>OG Kush</option>
-        <option>Sour Diesel</option>
-        <option>Green Crack</option>
-        <option>Granddaddy Purple</option>
-        <option>Cocaine</option>
-        <option>Meth</option>
-      </select>
+      
 
       <button onClick={runSolver}>Mix It!</button>
 
