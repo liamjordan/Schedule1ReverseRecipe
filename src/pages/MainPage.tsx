@@ -3,6 +3,7 @@ import { IngredientRepository } from "../models/IngredientRepository";
 import { MixingService } from "../services/MixingService";
 import { MixStep } from "../models/MixStep";
 import "../App.css";
+
 const MainPage = () => {
   const [allEffects, setAllEffects] = useState<string[]>([]);
   const [selectedEffects, setSelectedEffects] = useState<string[]>([]);
@@ -46,7 +47,7 @@ const MainPage = () => {
       <select
         value={baseDrug}
         onChange={(e) => setBaseDrug(e.target.value)}
-        style={{ marginBottom: "1rem", padding: "0.5rem" }}
+        style={{ marginBottom: "1rem", padding: "0.5rem", width: "100%" }}
       >
         <option>OG Kush</option>
         <option>Sour Diesel</option>
@@ -70,9 +71,7 @@ const MainPage = () => {
         ))}
       </div>
 
-      <h2
-        title="Higher depth explores more combinations, but takes more time (max 10)"
-      >
+      <h2 title="Higher depth explores more combinations, but takes more time (max 10)">
         Max Mix Depth: {maxDepth}
       </h2>
       <input
